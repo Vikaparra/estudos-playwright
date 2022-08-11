@@ -1,25 +1,19 @@
-// @ts-check
-const { devices } = require('@playwright/test');
+const { devices } = require("@playwright/test");
 
 const config = {
-  testDir: './tests',
-  /* Maximum time one test can run for. */
+  testDir: "./tests",
   timeout: 30 * 1000,
   expect: {
-    timeout: 5000
+    timeout: 7000,
   },
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: "html",
   use: {
     headless: false,
-    browserName: 'firefox',
-    /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
+    browserName: "firefox",
     actionTimeout: 0,
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    //trace: "on",
+    screenshot: "on",
   },
-
 };
 
 module.exports = config;
