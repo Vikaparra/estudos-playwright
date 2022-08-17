@@ -8,8 +8,8 @@ const config = {
   },
   reporter: "html",
   use: {
-    headless: false,
-    browserName: "firefox",
+    //headless: false,
+    browserName: "chromium",
     actionTimeout: 0,
     //trace: "on",
     screenshot: "on",
